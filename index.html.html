@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAJO DIGITAL — huduma za utengenezaji wa tovuti za kisasa kwa biashara, hoteli, migahawa, shule na maduka. Kigoma, Tanzania.">
+  <meta name="theme-color" content="#090909">
+  <title>MAJO DIGITAL | Tovuti za Kisasa kwa Biashara</title>
+  <style>
+    :root{--bg:#090909;--panel:#141414;--panel2:#1b1b1b;--gold:#d7ad52;--gold2:#f2d58d;--white:#f7f5ef;--muted:#b8b4aa;--line:rgba(215,173,82,.23);--max:1160px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} .wrap{width:min(var(--max),92%);margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,#8d6724,var(--gold2),#8d6724)}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1px}.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:13px;display:grid;place-items:center;color:var(--gold2);font-size:23px;font-weight:900;box-shadow:inset 0 0 16px rgba(215,173,82,.12)}
+    .brand span small{display:block;color:var(--gold);font-size:10px;letter-spacing:3px;margin-top:-5px}
+    nav{display:flex;align-items:center;gap:24px;font-size:13px;color:#ddd} nav a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:9px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120a;font-weight:800;font-size:13px;border:0;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)} .btn-outline{border:1px solid var(--gold);color:var(--gold2);background:transparent}
+    .hero{padding:88px 0 76px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 82% 25%,rgba(183,133,39,.16),transparent 38%),linear-gradient(135deg,#090909,#111 55%,#090909)}
+    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(215,173,82,.12);border-radius:50%;right:-170px;top:20px;box-shadow:0 0 0 35px rgba(215,173,82,.025),0 0 0 75px rgba(215,173,82,.02)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:1}
+    .eyebrow{color:var(--gold2);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-2px;margin:17px 0 20px;max-width:700px}
+    h1 em{font-style:normal;color:var(--gold2)} .lead{font-size:17px;color:#c9c5bb;max-width:590px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-card{border:1px solid var(--line);border-radius:22px;padding:28px;background:linear-gradient(145deg,#1b1a17,#101010);box-shadow:0 25px 80px rgba(0,0,0,.35);position:relative}
+    .orbit{width:190px;height:190px;border-radius:50%;border:1px solid rgba(215,173,82,.6);margin:5px auto 20px;display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(215,173,82,.13),transparent 68%)}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(215,173,82,.25);border-radius:50%;inset:15px}.orbit:after{inset:32px}
+    .orbit b{font-size:82px;color:var(--gold2);text-shadow:0 0 24px rgba(215,173,82,.25)}
+    .hero-card h3{text-align:center;margin:0;color:var(--gold2);letter-spacing:2px}.hero-card p{text-align:center;color:var(--muted);font-size:13px;margin:4px 0 0}
+    .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:22px}.mini-stats div{background:#0d0d0d;border:1px solid var(--line);border-radius:10px;padding:12px 7px;text-align:center;font-size:11px;color:#cfcac0}.mini-stats strong{display:block;color:var(--gold2);font-size:17px}
+    section{padding:76px 0}.section-head{max-width:680px;margin-bottom:34px}.section-head h2{font-size:clamp(29px,4vw,43px);line-height:1.12;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}
+    .about-panel h3{color:var(--gold2);margin-top:0}.about-panel p{color:var(--muted)}
+    .checks{display:grid;gap:12px;margin-top:20px}.checks span:before{content:"✓";color:var(--gold2);font-weight:900;margin-right:10px}
+    .services{background:#0e0e0e;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,#191919,#111);border:1px solid var(--line);border-radius:15px;padding:23px;min-height:190px}
+    .ico{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:rgba(215,173,82,.12);color:var(--gold2);font-size:22px;margin-bottom:16px}
+    .card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .work{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:var(--panel)}
+    .work-art{height:170px;padding:18px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 70% 25%,rgba(215,173,82,.22),transparent 38%),linear-gradient(135deg,#24211b,#0c0c0c)}
+    .browser{width:88%;border:1px solid rgba(242,213,141,.55);border-radius:8px;overflow:hidden;background:#101827;box-shadow:0 15px 25px #0008}
+    .browser-top{height:14px;background:#262626;border-bottom:1px solid #555}.browser-body{padding:16px 12px;text-align:center}.browser-body b{display:block;color:var(--gold2);font-size:18px}.browser-body small{color:#ddd;font-size:9px}
+    .work-info{padding:17px}.work-info h3{margin:0 0 4px;font-size:16px}.work-info p{margin:0;color:var(--muted);font-size:12px}
+    .note{margin-top:18px;padding:13px 16px;border-left:3px solid var(--gold);background:#15130f;color:#c9c1b0;font-size:12px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:2px solid var(--gold);padding:17px 14px;background:#121212;border-radius:0 0 12px 12px}.step b{color:var(--gold2);font-size:23px}.step h3{font-size:15px;margin:5px 0}.step p{font-size:12px;color:var(--muted);margin:0}
+    .cta{padding:50px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(ellipse at 80% 0%,rgba(215,173,82,.17),transparent 45%),#141414;text-align:center}
+    .cta h2{font-size:clamp(28px,4vw,42px);margin:8px 0}.cta p{color:var(--muted);max-width:600px;margin:0 auto 24px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:var(--gold2)}
+    @media(max-width:850px){nav{gap:12px}.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:65px 0}.hero-card{max-width:500px}.cards,.work-grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.nav{padding:13px 0;align-items:flex-start}.nav nav{display:none}.nav>.btn{padding:10px 12px;font-size:11px}.hero{padding:52px 0}.lead{font-size:15px}section{padding:58px 0}.cards,.work-grid,.process{grid-template-columns:1fr}.cta{padding:32px 18px}.mini-stats strong{font-size:15px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#mwanzo"><div class="brand-mark">M</div><span>MAJO<small>DIGITAL</small></span></a>
+      <nav aria-label="Menyu kuu">
+        <a href="#mwanzo">Mwanzo</a><a href="#kuhusu">Kuhusu</a><a href="#huduma">Huduma</a><a href="#bei">Bei</a><a href="#kazi">Kazi zetu</a><a href="#mawasiliano">Mawasiliano</a>
+      </nav>
+      <a class="btn" href="https://www.instagram.com/majo_digital_tz/" target="_blank" rel="noopener">Wasiliana nasi</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="mwanzo">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Kigoma, Tanzania · Huduma za kidijitali</div>
+          <h1>Biashara yako<br><em>iwe mtandaoni.</em></h1>
+          <p class="lead">Tunatengeneza tovuti za kisasa zinazosaidia biashara kujitambulisha, kuonyesha huduma na kuwafikia wateja kwa urahisi.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.instagram.com/majo_digital_tz/" target="_blank" rel="noopener">Tuandikie Instagram DM ↗</a>
+            <a class="btn btn-outline" href="#huduma">Angalia huduma</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="orbit"><b>M</b></div>
+          <h3>MAJO DIGITAL</h3><p>Building the Future</p>
+          <div class="mini-stats"><div><strong>01</strong>Ubunifu</div><div><strong>02</strong>Urahisi</div><div><strong>03</strong>Ukuaji</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kuhusu">
+      <div class="wrap about-grid">
+        <div class="section-head">
+          <div class="eyebrow">Kuhusu MAJO DIGITAL</div>
+          <h2>Tunakusaidia kuleta biashara yako kwenye ulimwengu wa kidijitali.</h2>
+          <p>MAJO DIGITAL ni chapa ya huduma za teknolojia inayoanzia Kigoma, Tanzania, ikiwa na lengo la kusaidia biashara kuwa na uwepo mzuri mtandaoni kupitia tovuti zinazovutia na rahisi kutumia.</p>
+        </div>
+        <div class="about-panel">
+          <h3>Dhamira yetu</h3>
+          <p>Kutengeneza suluhisho rahisi za kidijitali zinazowasaidia wajasiriamali na taasisi kuwasilisha taarifa za biashara zao kwa njia ya kisasa.</p>
+          <div class="checks"><span>Muonekano unaoendana na biashara yako</span><span>Tovuti zinazotumika kwenye simu na kompyuta</span><span>Mawasiliano ya moja kwa moja na mteja</span><span>Ushirikiano na mteja katika kila hatua</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="huduma">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Huduma zetu</div><h2>Suluhisho za tovuti kwa mahitaji tofauti.</h2><p>Chagua aina ya tovuti inayolingana na shughuli zako. Tutajadili mahitaji na ukubwa wa mradi kabla ya kuanza.</p></div>
+        <div class="cards">
+          <article class="card"><div class="ico">🏨</div><h3>Tovuti za hoteli</h3><p>Onyesha vyumba, huduma, picha na taarifa za mawasiliano ya hoteli au guest house.</p></article>
+          <article class="card"><div class="ico">🍽️</div><h3>Tovuti za migahawa</h3><p>Onyesha menyu, huduma za catering, eneo na njia za wateja kuwasiliana nawe.</p></article>
+          <article class="card"><div class="ico">🏫</div><h3>Tovuti za shule</h3><p>Wasilisha taarifa za shule, programu, matangazo na mawasiliano kwa wazazi.</p></article>
+          <article class="card"><div class="ico">🛍️</div><h3>Tovuti za maduka</h3><p>Onyesha bidhaa, maelezo na namna wateja wanavyoweza kuulizia bidhaa.</p></article>
+          <article class="card"><div class="ico">🏢</div><h3>Tovuti za makampuni</h3><p>Jenga utambulisho wa kampuni kwa kurasa za kuhusu sisi, huduma na mawasiliano.</p></article>
+          <article class="card"><div class="ico">🛠️</div><h3>Matengenezo ya tovuti</h3><p>Msaada wa kusasisha taarifa, picha na maudhui ya tovuti kulingana na makubaliano.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="bei" class="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Bei za huduma</div>
+          <h2>Chagua kifurushi kinachokufaa.</h2>
+          <p>Bei za kuanzia kwa biashara ndogo na za kati. Gharama ya mwisho itategemea mahitaji na ukubwa wa mradi.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="ico">🌱</div>
+            <h3>Kifurushi cha Mwanzo</h3>
+            <p style="color:var(--gold2);font-size:27px;font-weight:900;margin:12px 0">TSh 80,000</p>
+            <p>Tovuti ya ukurasa mmoja, muonekano unaotumika kwenye simu na kompyuta, taarifa za biashara na kiungo cha Instagram.</p>
+          </article>
+          <article class="card" style="border-color:rgba(242,213,141,.65)">
+            <div class="ico">💼</div>
+            <h3>Kifurushi cha Biashara</h3>
+            <p style="color:var(--gold2);font-size:27px;font-weight:900;margin:12px 0">TSh 180,000</p>
+            <p>Hadi kurasa 5, huduma, kuhusu biashara, picha, mawasiliano na muonekano unaoendana na chapa yako.</p>
+          </article>
+          <article class="card">
+            <div class="ico">⭐</div>
+            <h3>Kifurushi cha Kitaalamu</h3>
+            <p style="color:var(--gold2);font-size:27px;font-weight:900;margin:12px 0">TSh 300,000</p>
+            <p>Hadi kurasa 8, sehemu za ziada kulingana na mahitaji, picha na mpangilio maalum wa biashara yako.</p>
+          </article>
+        </div>
+        <div class="about-panel" style="margin-top:18px">
+          <h3>Huduma za ziada</h3>
+          <p><strong style="color:var(--gold2)">Matengenezo ya tovuti: TSh 20,000 kwa mwezi</strong> — kwa masasisho madogo ya taarifa na picha kulingana na makubaliano.</p>
+          <p style="font-size:12px">Kumbuka: Domain, hosting, barua pepe za biashara, mifumo ya malipo na huduma nyingine za mtu wa tatu hazijajumuishwa kwenye bei hizi. Gharama zake zitakubaliwa na mteja kabla ya kazi kuanza. Bei ni za kuanzia na zinaweza kubadilika kulingana na mahitaji ya mradi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kazi">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Kazi zetu</div><h2>Mifano ya miradi tunayoweza kutengeneza.</h2><p>Hii ni mifano ya dhana za muonekano wa tovuti. Tutaibadilisha kulingana na mahitaji ya kila mteja.</p></div>
+        <div class="work-grid">
+          <article class="work"><div class="work-art"><div class="browser"><div class="browser-top"></div><div class="browser-body"><b>HOTELI YAKO</b><small>Karibu · Vyumba · Huduma · Wasiliana nasi</small></div></div></div><div class="work-info"><h3>Tovuti ya hoteli</h3><p>Mfano wa ukurasa wa hoteli na malazi.</p></div></article>
+          <article class="work"><div class="work-art"><div class="browser"><div class="browser-top"></div><div class="browser-body"><b>MGAHAWA</b><small>Menyu · Catering · Oda · Mawasiliano</small></div></div></div><div class="work-info"><h3>Tovuti ya mgahawa</h3><p>Mfano wa kuonyesha menyu na huduma.</p></div></article>
+          <article class="work"><div class="work-art"><div class="browser"><div class="browser-top"></div><div class="browser-body"><b>SHULE BORA</b><small>Kuhusu · Masomo · Habari · Mawasiliano</small></div></div></div><div class="work-info"><h3>Tovuti ya shule</h3><p>Mfano wa taarifa za shule na programu.</p></div></article>
+        </div>
+        <div class="note">Uwazi kwa wateja: picha hizi ni mifano ya kuonyesha aina ya kazi, si miradi iliyokamilishwa kwa wateja. Tutabadilisha sehemu hii kadiri tutakavyokuwa na kazi halisi za kuonyesha.</div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Namna tunavyofanya kazi</div><h2>Hatua rahisi kutoka wazo hadi tovuti.</h2></div>
+        <div class="process">
+          <div class="step"><b>01</b><h3>Tunasikiliza</h3><p>Unatueleza kuhusu biashara na mahitaji yako.</p></div>
+          <div class="step"><b>02</b><h3>Tunapanga</h3><p>Tunakubaliana kurasa, maudhui na gharama kabla ya kuanza.</p></div>
+          <div class="step"><b>03</b><h3>Tunatengeneza</h3><p>Tunakuonyesha muundo na kufanya marekebisho yaliyokubaliwa.</p></div>
+          <div class="step"><b>04</b><h3>Tunachapisha</h3><p>Tovuti huwekwa mtandaoni baada ya ukaguzi na makubaliano.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mawasiliano">
+      <div class="wrap">
+        <div class="cta">
+          <div class="eyebrow">Tuanze mazungumzo</div>
+          <h2>Unahitaji tovuti ya biashara yako?</h2>
+          <p>Tuandikie kupitia Instagram DM. Tueleze aina ya biashara yako na tovuti unayohitaji ili tujadili hatua zinazofuata.</p>
+          <a class="btn" href="https://www.instagram.com/majo_digital_tz/" target="_blank" rel="noopener">Wasiliana nasi Instagram ↗</a>
+          <p style="font-size:12px;margin:18px auto 0">📍 Kigoma, Tanzania</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><div><strong>MAJO DIGITAL</strong> · Building the Future</div><div>© <span id="year"></span> MAJO DIGITAL. Haki zote zimehifadhiwa.</div><div>Kigoma, Tanzania</div></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
